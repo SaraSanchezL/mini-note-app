@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import apiNotes from '../services/api-notes';
-import "../stylesheets/app.scss"
+import "../stylesheets/app.scss";
+import { BiCopyright } from "react-icons/bi";
 
 const App = () => {
   const [notes, setNotes] = useState([]);
@@ -66,10 +67,10 @@ const App = () => {
   const renderAppNotes = () => {
     return notes.map(note => {
       return (
-        <li key={note.id} className="note" id={note.id}>
+        <li key={note.id} className="itemLi" id={note.id}>
           <h2 className="titleNote">{note.title}</h2>
           <p className="noteDefinition">{note.description}</p>
-          <button onClick={handleClickDelete} id={note.id}>X</button>
+          <button className="btnDelete" onClick={handleClickDelete} id={note.id}>X</button>
         </li>
       );
     });
@@ -83,22 +84,22 @@ const App = () => {
     <>
 
       <header className="header">
-        <h1 className="mainTitle">Save your notes</h1>
+        <h1 className="mainTitle">Save Your Notes</h1>
       </header>
 
       <main className="main">
         <div>
           <form action="" onSubmit={handleForm}>
-            <label htmlFor="title">Title</label>
-            <input type="text" name="title" id="title" onChange={handleTitle} value={title} />
-            <label htmlFor="description">Description</label>
-            <input type="text" name="description" id="description" onChange={handleDescription} value={description} />
-            <input type="submit" value="New Note" />
+            <label className="label" htmlFor="title">Title</label>
+            <input className="inputForm" type="text" name="title" id="title" onChange={handleTitle} value={title} />
+            <label className="label" htmlFor="description">Description</label>
+            <input className="inputForm" type="text" name="description" id="description" onChange={handleDescription} value={description} />
+            <input className="inputBtn" type="submit" value="New Note" />
           </form>
         </div>
 
-        <section>
-          <ul>
+        <section className="sectionNotes">
+          <ul className="listNotes">
             {renderAppNotes()}
           </ul>
         </section>
@@ -106,9 +107,9 @@ const App = () => {
 
       </main>
 
-      <footer>
-        <p>My Notes</p>
-        <p className="text">Copy Sara Sánchez</p>
+      <footer className="footer">
+        <p>Simple App Notes</p>
+        <p className="text"><BiCopyright /> Sara Sánchez</p>
 
       </footer>
 

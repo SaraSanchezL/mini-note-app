@@ -1,1 +1,66 @@
-@import 'index.scss'
+@import 'index.scss';
+
+body {
+  background-color: lightblue;
+};
+
+.header {
+  border-bottom: dashed 1px red;
+  color: goldenrod;
+  padding: 10px;
+}
+
+.main {
+  height: 80vh;
+  padding: 10px;
+}
+
+.label {
+  margin: 5px;
+  color: blue;
+}
+.inputForm {
+  color: red;
+  margin-right: 5px;
+}
+
+.inputBtn {
+  border-radius: 20%;
+  background-color: blue;
+  color: red;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.listNotes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.itemLi {
+  background-color: gold;
+  border: solid 1px red;
+  margin: 5px;
+  padding: 20px;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.titleNote, .noteDefinition, .btnDelete {
+margin: 5px;
+text-transform: capitalize;
+}
+
+.footer {
+  border-top: dashed 1px red;
+  padding-top: 10px;
+  color: goldenrod;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
