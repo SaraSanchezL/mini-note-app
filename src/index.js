@@ -21,17 +21,6 @@ const db = new Database("./src/db/database.db", { verbose: console.log });
 
 //Endpoints
 
-server.get('/', (req, res, next) => {
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      name: 'mini-note-app',
-      version: '0.1.0'
-    }
-  });
-});
-
 server.get("/notes", (req, res) => {
   let notes = [];
   const query = db.prepare(
@@ -69,5 +58,5 @@ server.delete("/delete-note", (req, res) => {
 
 
 //Static Server
-const staticServerPath = "./src/public-react";
-server.use(express.static(staticServerPath));
+const staticServerPathWeb = "./src/public-react";
+server.use(express.static(staticServerPathWeb));
