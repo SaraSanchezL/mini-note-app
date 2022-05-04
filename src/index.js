@@ -21,7 +21,7 @@ const db = new Database("./src/db/database.db", { verbose: console.log });
 
 //Endpoints
 
-app.get('/', (req, res, next) => {
+server.get('/', (req, res, next) => {
 
   res.status(200).json({
     status: 'success',
