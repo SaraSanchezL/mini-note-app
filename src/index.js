@@ -14,20 +14,24 @@ const serverPort = process.env.PORT || 4000;
 server.listen(serverPort, () => {
   console.log(`Server listening at http://localhost:${serverPort}`);
 });
-// const serverPort = 4000;
-// server.listen(serverPort, () => {
-//   console.log(`Server listening at http://localhost:${serverPort}`);
-// });
-//servidor de estáticos para las imágenes y estilos
-// const staticServerPathImg = "./src/public-movies-images/";
-// server.use(express.static(staticServerPathImg));
-// const staticServerPathStyles = "./src/public-css";
-// server.use(express.static(staticServerPathStyles));
+
 
 // Database
 const db = new Database("./src/db/database.db", { verbose: console.log });
 
 //Endpoints
+
+app.get('/', (req, res, next) => {
+
+  res.status(200).json({
+    status: 'success',
+    data: {
+      name: 'mini-note-app',
+      version: '0.1.0'
+    }
+  });
+});
+
 server.get("/notes", (req, res) => {
   let notes = [];
   const query = db.prepare(
