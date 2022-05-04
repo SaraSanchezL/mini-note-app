@@ -1,7 +1,11 @@
+const EXPRESS_SERVER_NOTES = `https://mini-note-app.herokuapp.com/notes`;
+const EXPRESS_SERVER_SAVE = `https://mini-note-app.herokuapp.com/save-note`;
+const EXPRESS_SERVER_DELETE = `https://mini-note-app.herokuapp.com/delete-note`;
+
 
 const getNotesFromApi = () => {
   console.log('Se están pidiendo las notas de la app');
-  return fetch(`http://localhost:4000/notes`, { method: "GET" })
+  return fetch(EXPRESS_SERVER_NOTES, { method: "GET" })
     .then(response => response.json())
     .then(data => {
       return data;
@@ -11,7 +15,7 @@ const getNotesFromApi = () => {
 const saveNotesApi = (data) => {
   console.log("Se están enviando datos:", data);
   return fetch(
-    "http://localhost:4000/save-note", {
+    EXPRESS_SERVER_SAVE, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data)
@@ -25,7 +29,7 @@ const saveNotesApi = (data) => {
 
 const deleteNoteApi = (id) => {
   return fetch(
-    "http://localhost:4000/delete-note", {
+    EXPRESS_SERVER_DELETE, {
     method: "DELETE",
     headers: {
       'Content-Type': 'application/json',
