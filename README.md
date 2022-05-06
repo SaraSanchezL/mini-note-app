@@ -8,7 +8,6 @@ Made with SQL, Node JS and React.
 - Node JS is used to create static server, create communication with the database through endpoints (read, save, delete notes).
 - SQL is used to create the database where the notes written in the app will be saved. At the moment you can only add title and description.
 - React is used to create application functions with events (API requests to paint previously saved notes, save notes, delete notes, save form input values...).
-- It will be deployed on Heroku once it is functional.
 
 ## To do:
 
@@ -16,7 +15,6 @@ Made with SQL, Node JS and React.
 - Create an endpoint with UPDATE verb to update notes database information.
 - Refactor and review code.
 - Styles with CSS.
-- Deployed on Heroku.
 
 ### How to start the backend
 
