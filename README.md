@@ -1,8 +1,8 @@
-# A small application to keep notes. 📓 
+# A small application to keep notes. 📓
 
-⭐ Made with SQL, Node JS and React. 
+⭐ Made with SQL, Node JS and React.
 
-- <div align="center"> <img src="/src/images/portPreview.png" width="400px"</img> </div>
+ <div align="center"> <img src="./web/src/images/simple-notes-app.png" width="400px"</img> </div>
 
 ## Description:
 
