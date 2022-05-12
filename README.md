@@ -1,6 +1,8 @@
-# A small application to keep notes.
+# A small application to keep notes. 📓 
 
-Made with SQL, Node JS and React.
+⭐ Made with SQL, Node JS and React. 
+
+- <div align="center"> <img src="/src/images/portPreview.png" width="400px"</img> </div>
 
 ## Description:
 
@@ -8,13 +10,6 @@ Made with SQL, Node JS and React.
 - Node JS is used to create static server, create communication with the database through endpoints (read, save, delete notes).
 - SQL is used to create the database where the notes written in the app will be saved. At the moment you can only add title and description.
 - React is used to create application functions with events (API requests to paint previously saved notes, save notes, delete notes, save form input values...).
-
-## To do:
-
-- Error message if empty fields or failed request.
-- Create an endpoint with UPDATE verb to update notes database information.
-- Refactor and review code.
-- Styles with CSS.
 
 ### How to start the backend
 
